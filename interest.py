@@ -20,7 +20,7 @@ def get_historical_rates(pool, address):
     boxes = response.json()["items"]
     filtered_boxes = [
         box for box in boxes
-        if box['assets'] and box['assets'][0]['tokenId'] == "13badb3b0c304a6d5859f70ac341d5b2b4ceb0be4c640ae6d1ad3a8a1edf6285"
+        if box['assets'] and box['assets'][0]['tokenId'] == pool["CHILD_NFT"]
     ]
 
     # Order boxes by their R6 value
